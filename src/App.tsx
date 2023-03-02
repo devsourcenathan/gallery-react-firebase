@@ -3,6 +3,8 @@ import { Upload } from "./components/Upload";
 
 import { initializeApp } from "firebase/app";
 
+import { getStorage, ref, uploadBytes } from "firebase/storage";
+import { useState } from "react";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyA3-6XBTg-jGQGgsvznIriMh0NAqdoBISs",
@@ -16,7 +18,17 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+// Initialize Cloud Storage and get a reference to the service
+const storage = getStorage(app);
+// Create a storage reference from our storage service
+const storageRef = ref(storage);
+
 function App() {
+  const [file, setFile] = useState(null);
+  uploadBytes(storageRef, file).then((snapshot) => {
+    console.log("Uploaded a blob or file!");
+  });
+
   const items = [
     {
       name: "Jonathan",
