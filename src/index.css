@@ -104,32 +104,7 @@ input[type=file] {
   object-fit: cover;
 }
 
-.side-social {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  list-style-type: none;
-}
 
-.side-social a {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(calc(-100% - 10px));
-  transition: transform 0.2s ease-in-out;
-}
-
-.side-social a:hover {
-  background-color: #333;
-}
-
-.side-social a img {
-  width: 80%;
-}
 
 .profile-info {
   position: absolute;
@@ -155,22 +130,10 @@ input[type=file] {
   will-change: transform;
 }
 
-.profile-card:hover .profile-info,
-.profile-card:hover .side-social a {
+.profile-card:hover .profile-info{
   transform: translate(0);
 }
 
-.profile-card:hover .side-social a:nth-child(1) {
-  transition-delay: 0.1s;
-}
-
-.profile-card:hover .side-social a:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
-.profile-card:hover .side-social a:nth-child(3) {
-  transition-delay: 0.3s;
-}
 
 .profile-card:hover {
   transform: scale(0.95);
@@ -178,8 +141,7 @@ input[type=file] {
 }
 
 @media (pointer: coarse) {
-  .profile-info,
-  .side-social a {
+  .profile-info{
     transform: translate(0);
   }
 
