@@ -150,16 +150,8 @@ input[type=file] {
   color: #f1f1f1;
 }
 
-.profile-work {
-  font-size: 16px;
-  font-weight: 500;
-  font-style: italic;
-  color: #f1f1f1;
-  font-family: Raleway, sans-serif;
-}
 
-.profile-name,
-.profile-work {
+.profile-name {
   will-change: transform;
 }
 

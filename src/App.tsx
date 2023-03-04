@@ -24,29 +24,23 @@ const storage = getStorage(app);
 const storageRef = ref(storage);
 
 function App() {
-  const [file, setFile] = useState(null);
-  uploadBytes(storageRef, file).then((snapshot) => {
-    console.log("Uploaded a blob or file!");
-  });
+  // const [file, setFile] = useState(null);
+  // uploadBytes(storageRef, file).then((snapshot) => {
+  //   console.log("Uploaded a blob or file!");
+  // });
 
   const items = [
     {
-      name: "Jonathan",
-      work: "Software Engineer",
+      name: "Nathan Gislain",
       src: "https://i.pravatar.cc/500",
-      socials: ["test", "test", "test"],
+    },
+    {
+      name: "Kadje Kevine",
+      src: "https://i.pravatar.cc/500",
     },
     {
       name: "Jonathan",
-      work: "Software Engineer",
       src: "https://i.pravatar.cc/500",
-      socials: ["test", "test", "test"],
-    },
-    {
-      name: "Jonathan",
-      work: "Software Engineer",
-      src: "https://i.pravatar.cc/500",
-      socials: ["test", "test", "test"],
     },
   ];
   return (
